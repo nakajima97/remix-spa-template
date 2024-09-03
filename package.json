@@ -6,9 +6,11 @@
   "scripts": {
     "build": "remix vite:build",
     "dev": "remix vite:dev",
-    "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
     "preview": "vite preview",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "lint:check": "biome lint .",
+    "format:check": "biome format .",
+    "bc": "biome check --write ."
   },
   "dependencies": {
     "@remix-run/node": "^2.11.2",
