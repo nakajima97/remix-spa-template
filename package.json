@@ -10,7 +10,9 @@
 		"typecheck": "tsc",
 		"lint:check": "biome lint .",
 		"format:check": "biome format .",
-		"bc": "biome check --write ."
+		"bc": "biome check --write .",
+		"storybook": "storybook dev -p 6006",
+		"build-storybook": "storybook build"
 	},
 	"dependencies": {
 		"@remix-run/node": "^2.11.2",
@@ -20,7 +22,16 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.8.3",
+		"@chromatic-com/storybook": "^1.9.0",
 		"@remix-run/dev": "^2.11.2",
+		"@storybook/addon-essentials": "^8.2.9",
+		"@storybook/addon-interactions": "^8.2.9",
+		"@storybook/addon-links": "^8.2.9",
+		"@storybook/addon-onboarding": "^8.2.9",
+		"@storybook/blocks": "^8.2.9",
+		"@storybook/react": "^8.2.9",
+		"@storybook/react-vite": "^8.2.9",
+		"@storybook/test": "^8.2.9",
 		"@types/react": "^18.2.20",
 		"@types/react-dom": "^18.2.7",
 		"@typescript-eslint/eslint-plugin": "^6.7.4",
@@ -32,7 +43,9 @@
 		"eslint-plugin-jsx-a11y": "^6.7.1",
 		"eslint-plugin-react": "^7.33.2",
 		"eslint-plugin-react-hooks": "^4.6.0",
+		"eslint-plugin-storybook": "^0.8.0",
 		"postcss": "^8.4.38",
+		"storybook": "^8.2.9",
 		"tailwindcss": "^3.4.4",
 		"typescript": "^5.1.6",
 		"vite": "^5.1.0",
@@ -40,5 +53,8 @@
 	},
 	"engines": {
 		"node": ">=20.0.0"
+	},
+	"eslintConfig": {
+		"extends": ["plugin:storybook/recommended"]
 	}
 }
